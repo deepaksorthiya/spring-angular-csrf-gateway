@@ -23,7 +23,7 @@ public class SpringAngularCsrfGatewayApplication implements ApplicationRunner {
     }
 
     @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+    public RouteLocator routeLocator(RouteLocatorBuilder builder, SpaFilter spaFilter) {
 
         if (frontend.isEmpty() || api.isEmpty()) {
             throw new IllegalStateException("front end and backed urls not configured in application.yml");
@@ -31,7 +31,7 @@ public class SpringAngularCsrfGatewayApplication implements ApplicationRunner {
 
         return builder.routes()
                 .route("api", r -> r.path("/api/**").uri(api))
-                .route("angular", r -> r.path("/**").uri(frontend))
+                .route("angular", r -> r.path("/**").filters(filter -> filter.filter(spaFilter)).uri(frontend))
                 .build();
     }
 
