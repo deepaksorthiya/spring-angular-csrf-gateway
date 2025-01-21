@@ -4,8 +4,8 @@
 
 Spring Boot Cloud API Gateway for CSRF Based Angular Frontend and Spring based Login Backend </br>
 
-[Angular Frontend](https://github.com/deepaksorthiya/spring-angular-csrf-frontend.git) </br>
-[Spring Backend](https://github.com/deepaksorthiya/spring-angular-csrf-frontend) </br>
+[Angular Frontend](https://github.com/deepaksorthiya/spring-angular-csrf-frontend) </br>
+[Spring Backend](https://github.com/deepaksorthiya/spring-boot-security-csrf-spa) </br>
 
 for localhost, run angular using below command, don't use localhost, it won't work
 
